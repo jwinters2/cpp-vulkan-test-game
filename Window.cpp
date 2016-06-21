@@ -1,7 +1,7 @@
 #include "Window.h"
 #include "DetermineOS.h"
 
-WINDOW::WINDOW(int width_a,int height_a,std::string name_a)
+WINDOW::WINDOW(uint32_t width_a,uint32_t height_a,std::string name_a)
 {
   width=width_a;
   height=height_a;
@@ -29,17 +29,4 @@ void WINDOW::closeWindow()
 void WINDOW::update()
 {
   updateWindow();
-}
-
-//these aren't supposed to be here
-#include <iostream>
-void WINDOW::initWindow()
-{
-  std::cout<<name<<"\n";
-}
-void WINDOW::deinitWindow()
-{
-}
-void WINDOW::updateWindow()
-{
 }

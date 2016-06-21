@@ -189,4 +189,6 @@ void GRAPHICS_MANAGER::postRender()
   {
     drawText("> PostRender failed");
   }
+
+  game_window->update();
 }
