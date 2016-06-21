@@ -1,6 +1,7 @@
 #pragma once
 
-#include <vulkan/vulkan.h>
+#include "DetermineOS.h"
+#include "Window.h"
 
 class GRAPHICS_MANAGER
 {
@@ -22,6 +23,8 @@ class GRAPHICS_MANAGER
     VkCommandBuffer vulkan_command_buffer;
 
     VkCommandBufferBeginInfo vulkan_command_buffer_begin_info {};
+
+    WINDOW * game_window=NULL;
     
     void init();
     void deinit();

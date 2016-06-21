@@ -2,7 +2,7 @@
 
 #include <iostream>
 #include <vector>
-#include <vulkan/vulkan.h>
+#include "DetermineOS.h"
 
 GRAPHICS_MANAGER::GRAPHICS_MANAGER()
 {
@@ -10,6 +10,8 @@ GRAPHICS_MANAGER::GRAPHICS_MANAGER()
   initDevice();
   initCommandPool();
   initCommandBuffer();
+
+  game_window = new WINDOW(800,600,"test game");
 }
 
 GRAPHICS_MANAGER::~GRAPHICS_MANAGER()
