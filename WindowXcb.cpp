@@ -1,4 +1,4 @@
-//created window using XCB, which I think is linux's X-server
+//creates window using XCB, which I think is linux's X-server
 //credit to Niko Kauppi for the base code
 
 #include "DetermineOS.h"
