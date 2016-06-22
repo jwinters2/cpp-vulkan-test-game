@@ -11,7 +11,7 @@ GRAPHICS_MANAGER::GRAPHICS_MANAGER()
   initCommandPool();
   initCommandBuffer();
 
-  game_window = new WINDOW(800,600,"test game");
+  game_window = new WINDOW(&vulkan_instance,800,600,"test game");
 }
 
 GRAPHICS_MANAGER::~GRAPHICS_MANAGER()

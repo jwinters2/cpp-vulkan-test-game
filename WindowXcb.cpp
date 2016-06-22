@@ -80,6 +80,23 @@
                          XCB_CONFIG_WINDOW_X | XCB_CONFIG_WINDOW_Y,
                          coords);
     xcb_flush(window_xcb_connection);
+
+    std::cout<<"Window Init Succeeded\n";
+
+    //creates gives the surface to vulkan to handle
+    VkXcbSurfaceCreateInfoKHR vulkan_surface_create_info {};
+    vulkan_surface_create_info.sType = VK_STRUCTURE_TYPE_XCB_SURFACE_CREATE_INFO_KHR;
+    vulkan_surface_create_info.connection = window_xcb_connection;
+    vulkan_surface_create_info.window = window_xcb_window;
+    auto error=vkCreateXcbSurfaceKHR((*vulkan_instance_pointer),&vulkan_surface_create_info,NULL,&vulkan_surface);
+    if(error!=0)
+    {
+      std::cout<<"surface init failed\n";
+    }
+    else
+    {
+      std::cout<<"surface init succeeded\n";
+    }
   }
 
   void WINDOW::deinitWindow()

@@ -12,7 +12,7 @@ WORLD::WORLD()
 
 bool WORLD::isStillRunning()
 {
-  if(frame>1000000)
+  if(frame>100)
   {
     return false;
   }

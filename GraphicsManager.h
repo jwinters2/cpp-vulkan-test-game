@@ -21,7 +21,6 @@ class GRAPHICS_MANAGER
     VkDevice        vulkan_device;
     VkCommandPool   vulkan_command_pool;
     VkCommandBuffer vulkan_command_buffer;
-
     VkCommandBufferBeginInfo vulkan_command_buffer_begin_info {};
 
     WINDOW * game_window=NULL;
